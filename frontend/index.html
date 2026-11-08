@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#122d24">
+  <title>Контроль качества — Freedom Broker</title>
+  <link rel="icon" type="image/svg+xml" href="static/img/freedom-symbol.svg">
+  <link rel="stylesheet" href="static/css/app.css">
+  <link rel="stylesheet" href="static/css/card.css">
+  <link rel="stylesheet" href="static/css/radar.css">
+  <link rel="stylesheet" href="static/css/freedom.css">
+  <script>
+    // API base. In Dynamics 365 set window.CQA_CONFIG = { apiBase: "https://cqa.example.com" } before app.js.
+    window.CQA_CONFIG = window.CQA_CONFIG || { apiBase: "" };
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#view" id="skip-link">Перейти к содержимому</a>
+  <div class="route-bar" id="route-bar" aria-hidden="true"></div>
+  <header class="site-head">
+    <div class="site-bar">
+      <a class="brand" href="#/conversations" aria-label="Freedom CQA — все разговоры">
+        <img src="static/img/freedom-logo-light.svg" width="504" height="118" alt="Freedom">
+        <span class="brand-product">CQA</span>
+      </a>
+      <button class="btn site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-panel">
+        <span class="nav-icon" data-icon="menu"></span>Меню
+      </button>
+      <div class="site-panel" id="site-panel">
+        <nav class="site-nav" aria-label="Разделы">
+          <a class="btn nav-item" href="#/conversations" data-nav="conversations"><span class="nav-icon" data-icon="chat"></span>Разговоры</a>
+          <a class="btn nav-item" href="#/checklists" data-nav="checklists"><span class="nav-icon" data-icon="list"></span>Чек-листы</a>
+          <a class="btn nav-item" href="#/appeals" data-nav="appeals"><span class="nav-icon" data-icon="scale"></span>Апелляции<b class="nav-badge" id="appeals-badge" hidden></b></a>
+          <a class="btn nav-item" href="#/radar" data-nav="radar"><span class="nav-icon" data-icon="bulb"></span>Инсайты</a>
+        </nav>
+        <details class="site-menu site-org" id="account-menu" hidden>
+          <summary class="btn">Аккаунт</summary>
+          <div id="account-info"></div>
+        </details>
+      </div>
+    </div>
+  </header>
+  <main id="view" class="main" tabindex="-1" aria-busy="false"></main>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <script type="module" src="static/js/app.js"></script>
+</body>
+</html>

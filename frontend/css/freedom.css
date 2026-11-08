@@ -1,0 +1,98 @@
+/* Freedom palette and wordmark: https://fbroker.kz/images/Logo.svg
+   Semantic warning and error colors
+   stay in the base styles so they remain distinct from primary actions. */
+:root {
+  --freedom-accent: #02b140;
+  --brand-950: #143220;
+  --brand-900: #153d26;
+  --brand-800: #164734;
+  --brand-700: #176037;
+  --brand-600: #167640;
+  --brand-500: #338252;
+  --brand-300: #98c8a5;
+  --brand-200: #c2dec9;
+  --brand-100: #def0e3;
+  --brand-50: #f0f8f2;
+  --bg: #f4f5f4;
+  --surface-2: #f5f6f5;
+  --line: #dce1dd;
+  --line-strong: #bdc8bf;
+  --ink: #191d1a;
+  --ink-2: #414a43;
+  --ink-3: #576259;
+  --na: #545e56;
+  --na-bg: #edf0ee;
+  --na-mark: #bbc6be;
+  --shadow: 0 1px 2px #191d1a0f;
+  --shadow-lg: 0 14px 38px #191d1a22;
+  --focus: 0 0 0 3px #16764045;
+  --cv-client: var(--ink-2);
+}
+
+.site-head {
+  background: linear-gradient(100deg, #0d2929ed, #122e36a6 56%, #17323736),
+    url("../img/almaty-journal.jpg") right 29% / cover no-repeat #17343a;
+}
+.site-head .brand { display: inline-flex; align-items: center; gap: 10px; flex: none; border-radius: 6px; }
+.site-head .brand img { display: block; width: 144px; height: auto; }
+.brand-product {
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--brand-800);
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.site-head :is(.brand, .site-nav-toggle):focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+@media (width > 880px) {
+  .site-nav .nav-item { position: relative; color: #fff; font-weight: 650; }
+  .site-nav .nav-icon { display: none; }
+  .site-nav .nav-item:hover { color: #fff; background: #ffffff17; }
+  .site-nav .nav-item[aria-current="page"] {
+    color: #fff; background: transparent; font-weight: 760;
+  }
+  .site-nav .nav-item[aria-current="page"]::after {
+    content: ""; position: absolute; inset: auto calc(50% - 12px) 1px;
+    height: 3px; border-radius: 3px; background: #fff;
+  }
+  #account-info {
+    position: absolute; inset: calc(100% + 8px) 0 auto auto; width: max-content; max-width: 280px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow-lg);
+  }
+  .site-nav .nav-item:focus-visible, .site-org > summary:focus-visible {
+    outline: 2px solid #fff;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .site-head { background-position: right 46%; }
+  .site-head .brand { gap: 8px; }
+  .site-head .brand img { width: 116px; }
+  .brand-product { padding: 4px 7px; font-size: 11px; }
+  .site-head .site-nav-toggle { padding-inline: 10px; min-height: 36px; font-size: 14px; }
+}
+.route-bar { background: var(--freedom-accent); }
+
+.skel { background: var(--line); }
+.msg.client .who { color: var(--ink-2); }
+.msg.in-range { background: var(--surface-2); }
+.note.review, .cv-review { background: var(--brand-50); color: var(--brand-800); }
+.cv-pl-play { background: var(--line); color: var(--ink-2); }
+.cv-wave rect { fill: var(--na-mark); }
+.cv-wave.is-played rect { fill: var(--ink-2); }
+.cv-seg:hover, .cv-seg.is-range { background: #191d1a12; }
+.cv-seg.is-evidence, .cv-seg.is-focus { background: #16764026; }
+.cv-note-appeal:not(.is-open) { background: var(--surface-2); }
+.cv-now { box-shadow: inset 0 0 0 1px var(--brand-200); }
+.cv-ld-orb i:nth-child(2) { border-top-color: var(--freedom-accent); }
+.cv-skel-row i {
+  background: linear-gradient(90deg, var(--line) 25%, var(--surface-2) 50%, var(--line) 75%);
+  background-size: 200% 100%;
+}

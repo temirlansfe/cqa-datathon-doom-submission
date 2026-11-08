@@ -1,0 +1,36 @@
+name: cqa
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: cqa
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cqa}
+      POSTGRES_DB: cqa
+    volumes:
+      - cqa-pg:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:${DB_PORT:-5442}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cqa -d cqa"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql://cqa:${POSTGRES_PASSWORD:-cqa}@db:5432/cqa
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${APP_PORT:-8090}:8000"
+
+volumes:
+  cqa-pg:

@@ -1,0 +1,53 @@
+{
+  "error": "", "isSuccess": true,
+  "data": {
+    "dataset_group_id": "DEMO",
+    "total_records": 4,
+    "records": [
+      {
+        "conversation_id": "demo-ru-001", "channel": "agent chat", "language": "RU", "audio_url": null,
+        "transcript": [
+          {"timestamp": "00:00", "speaker": "bot", "text": "Здравствуйте! Я виртуальный помощник Freedom Broker. Опишите ваш вопрос."},
+          {"timestamp": "00:05", "speaker": "client", "text": "Хочу узнать, почему не пришли деньги на мой брокерский счёт. Перевёл вчера 500 000 тенге."},
+          {"timestamp": "00:07", "speaker": "system", "text": "Чат переведён на оператора"},
+          {"timestamp": "00:41", "speaker": "operator", "text": "Здравствуйте! Меня зовут Айгерим, я помогу вам. Подскажите, пожалуйста, номер договора и последние 4 цифры номера телефона для проверки личности."},
+          {"timestamp": "01:10", "speaker": "client", "text": "Договор 123456, телефон заканчивается на 7788."},
+          {"timestamp": "01:15", "speaker": "operator", "text": "Спасибо, данные подтверждены. Минуту, проверяю поступление, это займёт около 2 минут."},
+          {"timestamp": "03:02", "speaker": "operator", "text": "Платёж от 06.11 на 500 000 тенге поступил в банк-корреспондент и будет зачислен сегодня до 18:00. Если не зачислится, напишите нам, приложив квитанцию."},
+          {"timestamp": "03:30", "speaker": "client", "text": "Понятно, спасибо."},
+          {"timestamp": "03:35", "speaker": "operator", "text": "Рада была помочь! Могу ещё чем-то помочь? Хорошего дня!"},
+          {"timestamp": "03:50", "speaker": "system", "text": "Чат закрыт"}
+        ]
+      },
+      {
+        "conversation_id": "demo-kz-002", "channel": "agent chat", "language": "KZ", "audio_url": null,
+        "transcript": [
+          {"timestamp": "00:00", "speaker": "client", "text": "Сәлеметсіз бе, брокерлік шот ашу үшін қандай тарифтер бар?"},
+          {"timestamp": "00:50", "speaker": "operator", "text": "Тарифтер сайтта бар."},
+          {"timestamp": "01:20", "speaker": "client", "text": "Ал комиссия қанша? Сайтта таба алмадым, ыңғайсыз."},
+          {"timestamp": "02:40", "speaker": "operator", "text": "Маған жеке нөміріңізді жазыңыз, мен сізге жеке ақылы кеңес берем, компаниядан арзанырақ."},
+          {"timestamp": "03:10", "speaker": "system", "text": "Чат закрыт"}
+        ]
+      },
+      {
+        "conversation_id": "demo-en-003", "channel": "agent chat", "language": "EN", "audio_url": null,
+        "transcript": [
+          {"timestamp": "00:00", "speaker": "client", "text": "Hi"},
+          {"timestamp": "00:30", "speaker": "operator", "text": "Hello! My name is Daniyar, how can I help you today?"},
+          {"timestamp": "02:30", "speaker": "system", "text": "Client left the chat"}
+        ]
+      },
+      {
+        "conversation_id": "demo-ru-call-004", "channel": "voice call", "language": "RU",
+        "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+        "transcript": [
+          {"timestamp": "2026-11-06T10:00:02+05:00", "speaker": "operator", "text": "Добрый день, Freedom Broker, меня зовут Ерлан. Чем могу помочь?"},
+          {"timestamp": "2026-11-06T10:00:08+05:00", "speaker": "client", "text": "Когда я получу ответ по обращению про возврат комиссии?"},
+          {"timestamp": "2026-11-06T10:00:20+05:00", "speaker": "operator", "text": "Я передам вопрос специалистам."},
+          {"timestamp": "2026-11-06T10:00:27+05:00", "speaker": "client", "text": "А сколько времени это займёт?"},
+          {"timestamp": "2026-11-06T10:00:35+05:00", "speaker": "operator", "text": "Специалисты свяжутся с вами. Всего доброго!"}
+        ]
+      }
+    ]
+  }
+}

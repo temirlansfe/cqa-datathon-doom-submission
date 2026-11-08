@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Team materials: signed API links, raw dataset with real calls -- keep out of the public repo
+abylaikhan/
